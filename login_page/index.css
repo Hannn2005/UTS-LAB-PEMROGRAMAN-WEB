@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-light: #F0EFFF; 
+    --bg-dark-section: #4A2C8F; 
+    --primary-color: #7952B3; 
+    --text-light: #FFFFFF;
+    --text-dark: #333333;
+    --card-bg: #FFFFFF;
+    
+    --navbar-bg: #6A3EAE; 
+    --navbar-link-bg: rgba(255, 255, 255, 0.2); 
+    --btn-login-bg: #C199E0; 
+    --text-navbar-primary: #FFFFFF; 
+    --text-navbar-secondary: #E0D0F5; 
+    --logo-color: #2F0C52; 
+    --logo-icon-color: #E0D0F5; 
+    --hover-link-bg: rgba(255, 255, 255, 0.3); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--btn-login-bg);
+    align-items: center;
+    padding-top: 100px;
+    gap: 50px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.login-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.login-title p{
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+.login-title img{
+    width: 100px;
+}
+
+.login-form-container,.create-form-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+    position: relative;
+    padding: 20px 50px 150px 50px;
+}
+
+.create-form-container{
+    display: none;
+}
+
+.description-heading{
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+
+.input-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.input-container img{
+    width: 40px;
+}
+
+.input-container input{
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+}
+
+.sign-btn{
+    background-color: #7952B3;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.login-btn{
+    background-color: var(--btn-login-bg);
+    color: white;
+    padding: 5px;
+    width: 250px;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 360px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.15s ease-in;
+}
+
+.login-btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--btn-login-bg);
+    color: var(--btn-login-bg);
+}
+
+
+.description-logo{
+    position: absolute;
+    width: 200px;
+    height: 400px;
+    bottom: -110px;
+    right: -80px;
+    
+}
+
+.main-logo{
+    width: 400px;
+    
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div class = "step-3-container">
+        <div class = "status-container">
+            <p class="status-step"><span class = "status-icon">1 </span>Pilih Kategori <b>></b></p>
+            <p class="status-step"><span class = "status-icon">2</span>Detail Pesanan <b>></b></p>
+            <p class="status-step"><span class = "status-icon-current">3</span>Pembayaran </p>
+        </div>
+
+
+        <h1 class = "payment-status">Pembayaran QRIS Eventku</h1>
+       
+        <div class = "payment-bill-container">
+            <h1>Beauty Workshop</h1>
+            <h2>02 May 2025</h2>
+            <h2>Bali Beach Hotel, Bali</h2>
+            <img src = "asset/qr-dummy.png">
+            <p>Scan kode QR ini menggunakan </p>
+            <p>aplikasi e-wallet dan bank pilihanmu.</p>
+            <a id ="confirm-payment">Konfirmasi Pembayanan</a>
+        </div>
+
+
+
+        <div class = "payment-success">
+            <img src="asset/check-circle-fill 1.svg">
+            
+            <h2>Terimakasih pembayaran kamu untuk Beauty Workshop telah diterima</h2>
+         
+
+            <div class = "bill-detail-container">
+                <div class = "bill-detail">
+                    <p>Nomor Pesanan :</p>
+                    <p>Metode :</p>
+                    <p>Jumlah :</p>
+                    <p>Tanggal :</p>
+                </div>
+
+                 <div>
+                    <p>BW-2025-0012</p>
+                    <p>E-wallet</p>
+                    <p>1</p>
+                    <p>2 Mei 2025</p>
+                </div>
+            </div>
+
+                <a class ="payment-ticket-btn"href="ticket.html">Lihat Tiket Saya</a>
+                <a class = "payment-home-btn"href="../index.html">Kembali Ke Beranda</a>
+        </div>
+        
+        
+    </div>
+
+    <script>
+        const paymentBill = document.querySelector(".payment-bill-container");
+        const confirmBtn = document.getElementById("confirm-payment");
+        const successPay = document.querySelector(".payment-success");
+        const payStatus = document.querySelector(".payment-status");
+
+        confirmBtn.addEventListener('click' ,() =>{
+            paymentBill.style.display = "none";
+            successPay.style.display = "flex";
+            payStatus.textContent = "Pembayaran Berhasil !";
+        });
+
+        
+
+    </script>
+</body>
+</html>

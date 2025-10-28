@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-light: #F0EFFF; 
+    --bg-dark-section: #4A2C8F; 
+    --primary-color: #7952B3; 
+    --text-light: #FFFFFF;
+    --text-dark: #333333;
+    --card-bg: #FFFFFF;
+    
+    --navbar-bg: #6A3EAE; 
+    --navbar-link-bg: rgba(255, 255, 255, 0.2); 
+    --btn-login-bg: #C199E0; 
+    --text-navbar-primary: #FFFFFF; 
+    --text-navbar-secondary: #E0D0F5; 
+    --logo-color: #2F0C52; 
+    --logo-icon-color: #E0D0F5; 
+    --hover-link-bg: rgba(255, 255, 255, 0.3); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+a{
+    text-decoration: none;
+}
+
+/* <==main==> */
+
+/* Navigation */
+
+nav{
+    height: 70px;
+    background-color: var(--navbar-bg);
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav h1{
+    font-size: 1.5rem;
+    padding-left: 30px;
+}
+
+nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li{
+   list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.15s all ease;
+    
+}
+
+nav ul li a:hover{
+    background-color: var(--hover-link-bg);
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.login-container{
+   padding-right: 30px;
+   display: flex;
+   gap : 20px;
+    
+}
+
+.sign-in-button{
+    color: white;
+    font-size: 1.3rem;
+    padding: 5px;
+    background-color: #FFFFFF;
+    color: #7952B3;
+}
+
+.log-in-button{
+    color: white;
+    font-size: 1.3rem;
+    padding: 5px;
+    background-color: var(--btn-login-bg);
+    color: #FFFFFF;
+}
+
+
+/* event-detail */
+
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-light);
+    padding: 50px 150px;
+
+}
+
+main h1{
+    padding-bottom: 30px;
+}
+
+.img-banner{
+    margin: 0 auto;
+    width: 1100px;
+    font-weight: 400;
+    padding-bottom: 30px;
+    
+
+}
+
+
+.event-information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* event-information */
+.event-date{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.event-date h3{
+    font-size: 2rem;
+}
+
+.date-icon-container{
+    display: flex;
+    gap: 15px;
+}
+
+.date-icon{
+    background-color: var(--text-dark);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+
+/* event-price-container */
+
+.event-price-container{
+    background-color: var(--btn-login-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.event-price{
+    display: flex;
+    gap: 150px;
+    font-weight: 900;
+    
+}
+
+
+.event-buy-button{
+    background-color: var(--bg-dark-section);
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+
+}
+
+
+/* event-description */
+
+.event-description-container{
+    margin-top: 40px;
+}
+
+.event-description-container h3{
+    font-size: 2rem;
+}
+.event-description{
+    background-color: var(--btn-login-bg);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* End */
+
+
+
+
+/* <===Main-checkout attributes===> */
+
+.step-1-container , .step-2-container ,.step-3-container,.main-ticket-container{
+    padding: 100px 50px;
+    background-color: var(--text-navbar-secondary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.status-container{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-step{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-step b{
+    font-size: 1.5rem;
+}
+
+.status-icon,.status-icon-current{
+    display: inline-flex;
+    
+    background-color: black;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 200px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-icon-current{
+    background-color: #7952B3;
+}
+
+
+/* End */
+
+
+/* <==Step-1==> */
+
+.input-qty-container{
+    background-color: #C199E0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-detail{
+    display: flex;
+    gap: 150px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input-qty{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-qty button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7952B3;
+    border: none ;
+    color: white;
+    border-radius: 50px;
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.next-button{
+    background-color: #7952B3;
+    color: white;
+    padding : 15px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.15s ease;
+    width: 200px;
+    
+}
+
+.next-button:hover{
+    background-color: transparent;
+    color: #7952B3;
+    border: 1px solid #7952B3 ;
+    border-radius: 20px;
+}
+
+select{
+    background-color: #333333;
+    color: white;
+}
+/* End */
+
+
+
+
+/* <==Step-2==> */
+
+.step-2-container{
+   
+}
+
+.date{
+    background-color: black;
+    padding: 10px;
+    border-radius:15px;
+    color: white;
+}
+
+.order-detail-container {
+    background-color: #C199E0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    line-height: 30px;
+}
+
+.order-description p{
+    font-weight: bold;
+    text-align: end;
+}
+
+.step-2-title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.step-2-title-container img{
+    width: 40px;
+}
+
+.step-2-title-container p{
+    font-size: 2rem;
+}
+
+.order-detail-container p{
+    font-size: 1.3rem;
+    line-height: 40px;
+}
+
+
+
+/* End */
+
+
+
+/* <==Step-3==> */
+.step-3-container{
+    min-height: 100vh;
+    gap: 50px;
+}
+.payment-bill-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--btn-login-bg);
+    padding: 20px 100px;
+    border-radius: 20px;
+    gap: 10px;
+   
+}
+
+
+.payment-bill-container img{
+    width: 200px;
+}
+
+.payment-bill-container a{
+    position: absolute;
+    bottom: -100px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    padding: 15px;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    color: white;
+    cursor: pointer;
+    transition: 0.15s ease;
+
+}
+
+.payment-bill-container a:hover{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+
+.payment-success{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    gap: 25px;
+    padding: 25px;
+   
+}
+
+.payment-success img{
+    width: 200px;
+}
+
+.bill-detail-container{
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    gap: 5px;
+    font-size: 1.3rem;
+    padding: 20px;
+    
+}
+
+.bill-detail p{
+    text-align: right;
+}
+
+.payment-ticket-btn,.payment-home-btn{
+    font-size: 1.2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px 0px 20px 0px;
+    width: 300px;
+    transition: 0.15s ease;
+}   
+
+.payment-home-btn{  
+    background-color: white;
+    color: var(--primary-color); 
+}
+
+.payment-ticket-btn:hover,.payment-home-btn:hover{
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: black;
+}
+
+/* End */
+
+
+
+/* <==Ticket==> */
+
+.sub-ticket-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--btn-login-bg);
+    color: #4A2C8F;
+    padding: 50px;
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.ticket-description{
+    text-align: center;
+}
+
+.ticket-qr{
+    display: flex;
+    flex-direction: column;
+   
+}
+.ticket-qr img{
+    align-self: center;
+    width: 200px;
+    margin: 20px 100px;
+}
+
+.ticket-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ticket-btn-home,.ticket-btn-download{
+    background-color: var(--btn-login-bg);
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+    transition: all 0.15s ease;
+}
+
+.ticket-btn-home:hover,.ticket-btn-download:hover{
+    background-color: transparent;
+    border : 1px solid var(--btn-login-bg);
+    color: var(--btn-login-bg);
+}
+.ticket-btn-download{
+    background-color: white;
+    color: var(--btn-login-bg);
+}
