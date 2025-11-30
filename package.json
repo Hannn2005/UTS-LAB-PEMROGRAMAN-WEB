@@ -1,0 +1,7 @@
+{
+  "name": "monorepo-root",
+  "private": true,
+  "scripts": {
+    "start-backend": "cd backend && npm install && npm start"
+  }
+}
