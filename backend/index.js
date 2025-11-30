@@ -2,6 +2,8 @@ import express from "express"
 import cors from "cors"
 import pkg from "pg";
 import bcrypt from "bcrypt";
+import dotenv from "dotenv";
+dotenv.config(); 
 
 const { Pool } = pkg;
 
@@ -10,13 +12,13 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
+const PORT = process.env.PORT || 8383;
 
 // koneksi ke neon database
 
 const pool = new Pool({
-  connectionString:
-    "postgresql://neondb_owner:npg_yViWFlZ2Qcs1@ep-bold-pine-a4zijhk6-pooler.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
-  ssl: { rejectUnauthorized: false } 
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 });
 
 // user ketika post message di contact kami
@@ -137,6 +139,6 @@ app.get("/events/:id", async (req,res)=>{
 });
 
 
-app.listen(8383,(req,res)=>{
-    console.log("server running on 8383")
+app.listen(PORT,(req,res)=>{
+    console.log("server running on ",PORT)
 })
