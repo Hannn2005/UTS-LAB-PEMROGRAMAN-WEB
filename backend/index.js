@@ -9,8 +9,19 @@ const { Pool } = pkg;
 
 const app = express();
 
-app.use(cors());
+
 app.use(express.json())
+
+app.use(cors({
+  origin: [
+    "https://eventku.vercel.app",                         
+    "https://eventku-hannn2005s-projects.vercel.app",     
+    "http://localhost:5173"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 
 const PORT = process.env.PORT || 8383;
 
@@ -137,6 +148,7 @@ app.get("/events/:id", async (req,res)=>{
     res.status(500).json({ success: false, error: err.message });
   }
 });
+
 
 
 app.listen(PORT,(req,res)=>{
