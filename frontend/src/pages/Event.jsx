@@ -1,15 +1,17 @@
 import '../App.css'
 import { useEffect, useState } from "react";
-
+import { apiGet } from '../api/client.js';
 export default function EventList() {
 
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:8383/events")
-            .then(res => res.json())
-            .then(data => setEvents(data.data))
-            .catch(err => console.log("Error fetching events:", err));
+      apiGet("/events").then(data => {
+          if (data && data.data) {
+            setEvents(data.data);
+          }
+        });
+      
     }, []);
 
     return (

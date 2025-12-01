@@ -1,15 +1,20 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { apiGet } from "../api/client.js";
+
 import '../App.css'
 export default function Checkout() {
   const { id } = useParams();
   const [event, setEvent] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8383/events/${id}`)
-      .then(res => res.json())
-      .then(data => setEvent(data.data))
-      .catch(err => console.log(err));
+    apiGet(`/events/${id}`)
+      .then(data => {
+        if (data && data.data) {
+          setEvent(data.data);
+        }
+      })
+      .catch(err => console.log("Error fetching event:", err));
   }, [id]);
 
   if (!event) return <p className="text-center text-5xl font-bold">Loading...</p>;

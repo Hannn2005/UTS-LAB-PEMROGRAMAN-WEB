@@ -1,6 +1,8 @@
 import '../page_styling/Contact.css'
 import '../App.css'
 import { useState } from 'react'
+import { apiPost } from '../api/client.js';
+
 export default function Contact (){
     const [form, setForm] = useState({
     nama: "",
@@ -18,36 +20,30 @@ export default function Contact (){
 
   // handle submit
   async function handleSubmit(e) {
-    e.preventDefault();
-    setLoading(true);
+        e.preventDefault();
+        setLoading(true);
 
-    try {
-      const res = await fetch("http://localhost:8383/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+        try {
+            const data = await apiPost("/contact", form);
 
-      const data = await res.json();
-      setLoading(false);
+            setLoading(false);
 
-      if (data.success) {
-        alert("Pesan berhasil dikirim!");
-        setForm({
-          nama: "",
-          email: "",
-          subject: "",
-          pesan: ""
-        });
-      } else {
-        alert("Gagal mengirim pesan: " + data.error);
-      }
-    } catch (error) {
-      setLoading(false);
-      alert("Terjadi kesalahan: " + error.message);
+            if (data.success) {
+                alert("Pesan berhasil dikirim!");
+                setForm({
+                    nama: "",
+                    email: "",
+                    subject: "",
+                    pesan: ""
+                });
+            } else {
+                alert("Gagal mengirim pesan: " + data.error);
+            }
+        } catch (error) {
+            setLoading(false);
+            alert("Terjadi kesalahan: " + error.message);
+        }
     }
-  }
-
 
      return(
    
